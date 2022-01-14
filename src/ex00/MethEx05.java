@@ -2,6 +2,14 @@ package ex00;
 
 // 오버로딩 = over-loading = 과적재
 
+/**
+ * 1.메서드는 동일한 이름으로 만들 수 없다.
+ * 2.단 매개변수의 타입이 다르거나, 위치가 다르거나, 개수가 다르면 다른 메서드로 인식(오버로딩)
+ * 3. 개발자 입장에서 함수이름을 하나만 기억하면 된다.
+ * 4.경우의 수가 너무 많아지면 퇴사하고 싶어진다.
+ * 5.어떨 때 사용하면 되냐? 개수가 적을때!! 20개안!! 10개안!!
+ */
+
 class 사자1 {
     String name = "사자";
     int hp = 100;
@@ -81,5 +89,9 @@ public class MethEx05 {
         attack(bear1, tiger1);
         // 곰 -> 사자
         attack(bear1, lion1);
+
+        System.out.println(1);
+        System.out.println(1.0);
+        System.out.println(true);
     }
 }
