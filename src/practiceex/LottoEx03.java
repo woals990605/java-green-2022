@@ -1,0 +1,48 @@
+package practiceex;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Scanner;
+
+public class LottoEx03 {
+    public static void main(String[] args) {
+        // ArrayLIst담기
+        ArrayList<String> arraylist = new ArrayList<>();
+        arraylist.add("3");
+        arraylist.add("5");
+        arraylist.add("30");
+        arraylist.add("40");
+        arraylist.add("41");
+        arraylist.add("42");
+
+        Random r = new Random();
+
+        // HashSet 생성
+        HashSet<Integer> datas = new HashSet<>();
+
+        // Scanner로 금액을 입력받자
+        Scanner sc = new Scanner(System.in);
+        int money = sc.nextInt();
+        System.out.println(money + "원을 넣었습니다.");
+        int number = money / 1000;
+
+        for (int i = 1; i < number + 1; i++) {
+            System.out.println(i + "회");
+        }
+
+        while (true) {
+            int n = r.nextInt(45) + 1;// 45=0~44
+            System.out.println(n);
+
+            // HashSet 에 n값을 add해서 저장
+            datas.add(n);
+            // HashSet 데이터 크기가 6이되면 break
+            if (datas.size() == 6) {
+                break;
+            }
+        }
+        // HashSet 데이터 출력!!
+        System.out.println(datas);
+    }
+}
