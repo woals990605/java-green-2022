@@ -1,7 +1,5 @@
 package jsonex01;
 
-import com.google.gson.Gson;
-
 class SMSDto {
     private String groupId;
     private int successCount;
@@ -56,14 +54,14 @@ public class GsonEx02 {
 
         // JavaObject -> json으로 변경 (데이터 전송 목적)
         SMSDto javaDto = new SMSDto("R2GdEONszq64INB9", 1, 0);
-        Gson gson = new Gson();
-        String jsonDto = gson.toJson(javaDto);
-        System.out.println(jsonDto);
+        // Gson gson = new Gson();
+        // String jsonDto = gson.toJson(javaDto);
+        // System.out.println(jsonDto);
 
-        // Json ->JavaObject로 변경 데이터 다운로드 목적
-        SMSDto javasmsDto = gson.fromJson(jsonDto, SMSDto.class);
-        System.out.println(javasmsDto.getGroupId());
-        System.out.println(javasmsDto.getSuccessCount());
-        System.out.println(javasmsDto.getErrorCount());
+        // // Json ->JavaObject로 변경 데이터 다운로드 목적
+        // SMSDto javasmsDto = gson.fromJson(jsonDto, SMSDto.class);
+        // System.out.println(javasmsDto.getGroupId());
+        // System.out.println(javasmsDto.getSuccessCount());
+        // System.out.println(javasmsDto.getErrorCount());
     }
 }
