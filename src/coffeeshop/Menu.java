@@ -2,10 +2,11 @@ package coffeeshop;
 
 import java.util.List;
 
-public class Menu {
-
+class Menuitem {
     List<Menuitem> menuitems;
+}
 
+public class Menu {
     public void choose() {
 
     }

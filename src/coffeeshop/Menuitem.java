@@ -1,5 +1,6 @@
 package coffeeshop;
 
+import java.awt.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +9,22 @@ public class Menuitem {
     private String name;
     private int price;
 
-    public Menuitem(String name, int price) {
-        this.name = name;
-        this.price = price;
+    public Menuitem() {
+        Menuitem m1 = new Menuitem();
+        m1.name = "에스프레소";
+        m1.price = 1000;
+
+        Menuitem m2 = new Menuitem();
+        m2.name = "아메리카노";
+        m2.price = 1500;
+
+        Menuitem m3 = new Menuitem();
+        m3.name = "카푸치노";
+        m3.price = 2000;
+
+        Menuitem m4 = new Menuitem();
+        m4.name = "카라멜마끼야또";
+        m4.price = 2500;
     }
 
     public String getName() {
@@ -25,16 +39,7 @@ public class Menuitem {
         Customer customer = new Customer();
         Barista barista = new Barista();
 
-        Menuitem m1 = new Menuitem("에스프레소", 1000);
-        Menuitem m2 = new Menuitem("아메리카노", 1500);
-        Menuitem m3 = new Menuitem("카푸치노", 2000);
-        Menuitem m4 = new Menuitem("카라멜마끼야또", 2500);
-        List<Menuitem> list = new ArrayList<>();
-        list.add(m1);
-        list.add(m2);
-        list.add(m3);
-        list.add(m4);
+        List<MenuItem> list = new ArrayList<>();
 
-        Menu menu = new Menu(list);
     }
 }
