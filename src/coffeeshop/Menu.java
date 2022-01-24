@@ -2,13 +2,15 @@ package coffeeshop;
 
 import java.util.List;
 
-class Menuitem {
-    List<Menuitem> menuitems;
-}
-
 public class Menu {
-    public void choose() {
+    public void choose(MenuItem list) {
+        list.getName();
+    }
 
+    private List<MenuItem> menuitems;
+
+    public Menu(List<MenuItem> menuitems) {
+        this.menuitems = menuitems;
     }
 
 }
