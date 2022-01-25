@@ -3,8 +3,8 @@ package coffeeshop;
 import java.util.List;
 
 public class Menu {
-    public void choose(MenuItem list) {
-        list.getName();
+    public void choose(String menuName) {
+
     }
 
     private List<MenuItem> menuitems;

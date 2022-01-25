@@ -19,7 +19,7 @@ public class MainApp {
         // System.out.println(list.get(3).getName());
 
         Menu menu = new Menu(list);
-        customer.order(menu);
+        customer.order("아메");
 
     }
 }
