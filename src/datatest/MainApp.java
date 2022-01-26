@@ -10,32 +10,23 @@ public class MainApp {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("===== 출발일을 입력하세요 =====");
-        System.out.println("ex) 20220125");
+        System.out.println("ex) 20220126");
         // depPlandTime의 값이 길이가 8자가 아니면 프로그램을 종료한다.
         String depPlandTime = sc.nextLine();
-        if (depPlandTime.length() != 8) {
-            System.exit(0);
-        }
 
         System.out.println("===== 출발지를 입력하세요 =====");
         System.out.println("ex) 무안, 광주, 군산, 여수, 원주, 양양, 제주, 김해");
-        System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
+        System.out.println("ex) 사천, 울산, 울산, 인천, 김포, 포항, 대구, 청주");
         // depAirportNm 값이 길이가 2자가 아니면 프로그램을 종료한다.
         String depAirportNm = sc.nextLine();
-        if (depAirportNm.length() != 2) {
-            System.exit(0);
-        }
 
         System.out.println("===== 도착지를 입력하세요 =====");
         System.out.println("ex) 무안, 광주, 군산, 여수, 원주, 양양, 제주, 김해");
-        System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
+        System.out.println("ex) 사천, 울산, 울산, 인천, 김포, 포항, 대구, 청주");
         // arrAirportNm 값이 길이가 2자가 아니면 프로그램을 종료한다.
         String arrAirportNm = sc.nextLine();
-        if (arrAirportNm.length() != 2) {
-            System.exit(0);
-        }
 
-        List<Item> flightList = DownloadFlight.getFlighList(depPlandTime, depAirportNm, arrAirportNm);
+        List<Item> flightList = DownloadFlight.getFlightList(depPlandTime, depAirportNm, arrAirportNm);
         // System.out.println(flightList);
         for (int i = 0; i < flightList.size(); i++) {
             System.out.println("===========================");

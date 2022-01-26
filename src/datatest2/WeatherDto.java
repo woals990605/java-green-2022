@@ -28,6 +28,9 @@ public class WeatherDto {
         class Body {
             private String dataType;
             private Items items;
+            private int pageNo;
+            private int numOfRows;
+            private int totalCount;
 
             @Getter
             @AllArgsConstructor
@@ -42,7 +45,7 @@ public class WeatherDto {
                     private String category;
                     private int nx;
                     private int ny;
-                    private int obserValue;
+                    private String obserValue;
                 }
             }
         }
