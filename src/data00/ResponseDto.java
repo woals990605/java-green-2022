@@ -13,7 +13,7 @@ public class ResponseDto {
 
     @Data
     @AllArgsConstructor
-    class Response {
+    public class Response {
         private Header header;// 변수명을 꼭 동일하게!!
         private Body body;// 변수명을 꼭 동일하게!!
 
@@ -26,7 +26,7 @@ public class ResponseDto {
 
         @Data
         @AllArgsConstructor
-        class Body {
+        public class Body {
             private Items items;
             private int numOfRows;
             private int pageNo;
@@ -34,7 +34,7 @@ public class ResponseDto {
 
             @Data
             @AllArgsConstructor
-            class Items {
+            public class Items {
                 private List<Item> item;
 
                 @Data

@@ -19,9 +19,8 @@ public class DownloadAirport {
     public static Map<String, String> getAirportList() {
         Map<String, String> airportMap = new HashMap<>();
 
-        URL url;
         try {
-            url = new URL(
+            URL url = new URL(
                     "http://openapi.tago.go.kr/openapi/service/DmstcFlightNvgInfoService/getArprtList?serviceKey=wJmmW29e3AEUjwLioQR22CpmqS645ep4S8TSlqtSbEsxvnkZFoNe7YG1weEWQHYZ229eNLidnI2Yt5EZ3Stv7g%3D%3D&_type=json");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
