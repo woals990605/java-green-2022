@@ -19,7 +19,7 @@ public class MainApp {
 
         System.out.println("===== 출발지를 입력하세요 =====");
         System.out.println("ex) 무안, 광주, 군산, 여수, 원주, 양양, 제주, 김해");
-        System.out.println("ex) 사천, 울산, 울산, 인천, 김포, 포항, 대구, 청주");
+        System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
         // depAirportNm 값이 길이가 2자가 아니면 프로그램을 종료한다.
         String depAirportNm = sc.nextLine();
         if (depAirportNm.length() != 2) {
@@ -28,7 +28,7 @@ public class MainApp {
 
         System.out.println("===== 도착지를 입력하세요 =====");
         System.out.println("ex) 무안, 광주, 군산, 여수, 원주, 양양, 제주, 김해");
-        System.out.println("ex) 사천, 울산, 울산, 인천, 김포, 포항, 대구, 청주");
+        System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
         // arrAirportNm 값이 길이가 2자가 아니면 프로그램을 종료한다.
         String arrAirportNm = sc.nextLine();
         if (arrAirportNm.length() != 2) {
