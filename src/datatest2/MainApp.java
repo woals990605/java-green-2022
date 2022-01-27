@@ -30,7 +30,8 @@ public class MainApp {
         }
 
         // 만들어둔 메서드에 날짜와 시간 넣고 map 리턴받기
-        Map<String, String> weatherMap = DownloadWeather.getWeatherList(baseDate, baseTime);
+        Map<String, String> weatherMap = DownloadWeather.getWeatherList(baseDate,
+                baseTime);
 
         // map에서 키 "T1H"를 입력하여 온도값 얻어오기
         System.out.println("부산 진구의 현재 온도는 " + weatherMap.get("T1H") + "도 입니다.");

@@ -3,14 +3,20 @@ package coffeeshop;
 import java.util.List;
 
 public class Menu {
-    public void choose(String menuName) {
 
+    private List<MenuItem> items;
+
+    public Menu(List<MenuItem> items) {
+        this.items = items;
     }
 
-    private List<MenuItem> menuitems;
+    public MenuItem choose(String menuName) {
+        for (MenuItem item : items) {
+            if (item.getName().equals(menuName)) {
+                return item;
+            }
+        }
 
-    public Menu(List<MenuItem> menuitems) {
-        this.menuitems = menuitems;
+        return null;
     }
-
 }

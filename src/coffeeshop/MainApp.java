@@ -7,10 +7,10 @@ public class MainApp {
     public static void main(String[] args) {
         Customer customer = new Customer();
         Barista barista = new Barista();
-        MenuItem m1 = new MenuItem("에스", 1000);
-        MenuItem m2 = new MenuItem("아메", 1500);
-        MenuItem m3 = new MenuItem("카페", 2000);
-        MenuItem m4 = new MenuItem("카라멜", 2500);
+        MenuItem m1 = new MenuItem("에스프레소", 1000);
+        MenuItem m2 = new MenuItem("아메리카노", 1500);
+        MenuItem m3 = new MenuItem("카페모카", 2000);
+        MenuItem m4 = new MenuItem("카라멜마끼아또", 2500);
 
         List<MenuItem> list = Arrays.asList(m1, m2, m3, m4);
         // System.out.println(list.get(0).getName());
@@ -19,7 +19,7 @@ public class MainApp {
         // System.out.println(list.get(3).getName());
 
         Menu menu = new Menu(list);
-        customer.order("아메");
+        customer.order("아메리카노", menu, barista);
 
     }
 }
