@@ -3,49 +3,49 @@ package datatest2;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
 @AllArgsConstructor
+@Data
 public class WeatherDto {
     private Response response;
 
-    @Getter
     @AllArgsConstructor
+    @Data
     class Response {
         private Header header;
         private Body body;
 
-        @Getter
         @AllArgsConstructor
+        @Data
         class Header {
             private String resultCode;
             private String resultMsg;
         }
 
-        @Getter
         @AllArgsConstructor
+        @Data
         class Body {
             private String dataType;
-            private Items items;
             private int pageNo;
             private int numOfRows;
             private int totalCount;
+            private Items items;
 
-            @Getter
             @AllArgsConstructor
+            @Data
             class Items {
                 private List<Item> item;
 
-                @Getter
                 @AllArgsConstructor
+                @Data
                 class Item {
                     private String baseDate;
                     private String baseTime;
                     private String category;
                     private int nx;
                     private int ny;
-                    private String obserValue;
+                    private String obsrValue;
                 }
             }
         }
