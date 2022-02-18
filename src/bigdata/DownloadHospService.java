@@ -18,7 +18,7 @@ public class DownloadHospService {
 
         try {
             URL url = new URL(
-                    "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService?serviceKey=wJmmW29e3AEUjwLioQR22CpmqS645ep4S8TSlqtSbEsxvnkZFoNe7YG1weEWQHYZ229eNLidnI2Yt5EZ3Stv7g%3D%3D&pageNo=1&numOfRows=5190&_type=json");
+                    "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService?serviceKey=wJmmW29e3AEUjwLioQR22CpmqS645ep4S8TSlqtSbEsxvnkZFoNe7YG1weEWQHYZ229eNLidnI2Yt5EZ3Stv7g%3D%3D&pageNo=1&numOfRows=10&_type=json");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(conn.getInputStream(), "utf-8"));
@@ -26,6 +26,19 @@ public class DownloadHospService {
             Gson gson = new Gson();
             ResponseDto responseDto = gson.fromJson(responseJson, ResponseDto.class);
             List<Item> result = responseDto.getResponse().getBody().getItems().getItem();
+
+            int totalCount = responseDto.getResponse().getBody().getTotalCount();
+            url = new URL(
+                    "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService?serviceKey=wJmmW29e3AEUjwLioQR22CpmqS645ep4S8TSlqtSbEsxvnkZFoNe7YG1weEWQHYZ229eNLidnI2Yt5EZ3Stv7g%3D%3D&pageNo=1&numOfRows="
+                            + totalCount + "&_type=json");
+            conn = (HttpURLConnection) url.openConnection();
+            br = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), "utf-8"));
+            responseJson = br.readLine();
+            gson = new Gson();
+            responseDto = gson.fromJson(responseJson, ResponseDto.class);
+
+            result = responseDto.getResponse().getBody().getItems().getItem();
 
             System.out.println(result);
             System.out.println();
