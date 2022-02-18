@@ -33,7 +33,7 @@ public class Box {
         return height * width * length;
     }
 
-    public void print(int w, int l, int h) {
+    public void print() {
         System.out.println("가로는 : " + width);
         System.out.println("세로는 : " + length);
         System.out.println("높이는" + height);
@@ -44,11 +44,16 @@ public class Box {
 class Boxtest {
     public static void main(String[] args) {
         Box box1 = new Box();
+
         box1.setWidth(100);
         box1.setLength(100);
         box1.setheight(100);
-        box1.print(100, 100, 100);
+
+        // 7번 땡
+        box1.print();
+
         System.out.println(box1.getVolume());
+
         Box box2 = new Box();
         box2.setWidth(200);
         box2.setLength(200);
